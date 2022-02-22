@@ -1,0 +1,267 @@
+[external_libraries]
+Gtk = {min_version = "3.22"} # we have that feature enabled by default
+
+[options]
+girs_directories = ["../gir-files", "../"]
+library = "GtkSource"
+version = "4"
+min_cfg_version = "4"
+target_path = "."
+work_mode = "normal"
+generate_safety_asserts = true
+deprecate_by_min_version = true
+# with this option enabled, versions for gir and gir-files saved only to one file to minimize noise
+single_version_file = true
+
+external_libraries = [
+    "Cairo",
+    "GLib",
+    "GObject",
+    "Gio",
+    "Gdk",
+    "GdkPixbuf",
+    "Pango",
+]
+
+generate = [
+    "GtkSource.CompletionError",
+    "GtkSource.StyleSchemeChooserButton",
+    "GtkSource.StyleSchemeChooserWidget",
+    "GtkSource.FileLoaderError",
+    "GtkSource.FileSaverError",
+    "GtkSource.Language",
+    "GtkSource.ChangeCaseType",
+    "GtkSource.SortFlags",
+    "GtkSource.UndoManager",
+    "GtkSource.BracketMatchType",
+    "GtkSource.CompletionProvider",
+    "GtkSource.CompletionActivation",
+    "GtkSource.CompletionProposal",
+    "GtkSource.CompressionType",
+    "GtkSource.Encoding",
+    "GtkSource.NewlineType",
+    "GtkSource.FileSaverFlags",
+    "GtkSource.GutterRendererState",
+    "GtkSource.GutterRendererAlignmentMode",
+    "GtkSource.SpaceLocationFlags",
+    "GtkSource.SpaceTypeFlags",
+    "GtkSource.BackgroundPatternType",
+    "GtkSource.SmartHomeEndType",
+    "GtkSource.StyleSchemeChooser",
+    "GtkSource.ViewGutterPosition",
+]
+
+manual = [
+    "cairo.Context",
+    "Gtk.Actionable",
+    "Gtk.Adjustment",
+    "Gtk.Align",
+    "Gtk.Buildable",
+    "Gtk.TextBuffer",
+    "Gtk.Window",
+    "Gtk.Button",
+    "Gtk.Bin",
+    "Gtk.Container",
+    "Gtk.InputHints",
+    "Gtk.InputPurpose",
+    "Gtk.Justification",
+    "Gtk.PrintContext",
+    "Gtk.ResizeMode",
+    "Gtk.Scrollable",
+    "Gtk.ScrollablePolicy",
+    "Gtk.ScrollStep",
+    "Gtk.TextDirection",
+    "Gtk.TextView",
+    "Gtk.TextIter",
+    "Gtk.TextTag",
+    "Gtk.TextTagTable",
+    "Gtk.TextMark",
+    "Gtk.TextWindowType",
+    "Gtk.Tooltip",
+    "Gtk.Unit",
+    "Gtk.Widget",
+    "Gtk.WrapMode",
+    "GLib.Error",
+    "GLib.Quark",
+    "GdkPixbuf.Pixbuf",
+    "Gio.Icon",
+    "Gio.File",
+    "Gio.MountOperation",
+    "Gio.InputStream",
+    "GLib.Priority",
+    "Gio.Cancellable",
+    "Gdk.Event",
+    "Gdk.EventMask",
+    "Gdk.Rectangle",
+    "Gdk.RGBA",
+    "Pango.FontDescription",
+    "Pango.Stretch",
+    "Pango.Style",
+    "Pango.TabArray",
+    "Pango.Variant",
+    "Pango.Underline",
+    "GLib.Variant",
+    "Gio.Settings",
+    "Gio.SettingsBindFlags",
+]
+
+[[object]]
+name = "GtkSource.View"
+status = "generate"
+generate_builder = true
+    [[object.function]]
+    name = "get_mark_attributes"
+    ignore = true
+
+[[object]]
+name = "GtkSource.GutterRenderer"
+status = "generate"
+    [[object.function]]
+    name = "begin"
+    ignore = true
+    [[object.function]]
+    name = "draw"
+    ignore = true
+
+[[object]]
+name = "GtkSource.FileLoader"
+generate_builder = true
+status = "generate"
+    [[object.function]]
+    name = "set_candidate_encodings"
+    ignore = true
+
+[[object]]
+name = "GtkSource.CompletionInfo"
+status = "generate"
+    [[object.function]]
+    name = "move_to_iter"
+    ignore = true
+
+[[object]]
+name = "GtkSource.Buffer"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Mark"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.StyleScheme"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Completion"
+status = "generate"
+generate_builder = true
+    [[object.function]]
+    name = "create_context"
+    ignore = true
+
+[[object]]
+name = "GtkSource.CompletionContext"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.CompletionItem"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.CompletionWords"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.File"
+status = "generate"
+generate_builder = true
+
+
+[[object]]
+name = "GtkSource.FileSaver"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.FileSaver"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Gutter"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.GutterRendererPixbuf"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.GutterRendererText"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.LanguageManager"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Map"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.MarkAttributes"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.PrintCompositor"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Region"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.SearchContext"
+status = "generate"
+generate_builder = true
+manual_traits = ["SearchContextExtManual"]
+    [[object.function]]
+    name = "replace_all"
+    manual = true # wrong is_ok assertion
+
+[[object]]
+name = "GtkSource.SearchSettings"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Style"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.SpaceDrawer"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.StyleSchemeManager"
+status = "generate"
+generate_builder = true
+
+[[object]]
+name = "GtkSource.Tag"
+status = "generate"
+generate_builder = true

@@ -1,0 +1,30 @@
+[package]
+name = "sourceview4-sc"
+version = "0.3.0"
+authors = ["Christopher Davis <brainblasted@disroot.org>", "Eric Stokes <eestokes@pm.me>"]
+description = "API bindings for GtkSourceView 4 with subclassing support"
+license = "LGPL-2.1-or-later"
+keywords = ["gtksourceview", "sourceview", "gtk-rs", "gnome"]
+repository = "https://gitlab.gnome.org/World/Rust/sourceview4-rs"
+documentation = "https://world.pages.gitlab.gnome.org/Rust/sourceview4-rs/sourceview4/"
+exclude = ["gir-files/*", "gir/"]
+edition = "2021"
+
+[dependencies]
+libc = "0.2"
+bitflags = "1.2"
+cairo-rs = "0.15"
+glib = "0.15"
+gio = "0.15"
+gdk = "0.15"
+gtk = {version = "0.15", features = ["v3_20"]}
+gdk-pixbuf = "0.15"
+pango = "0.15"
+
+
+[dependencies.ffi]
+package = "sourceview4-sys"
+version = "0.3.0"
+
+[features]
+dox = ["ffi/dox"]
