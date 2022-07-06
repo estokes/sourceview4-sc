@@ -1,11 +1,11 @@
 [package]
-name = "sourceview4-sc"
+name = "sourceview4"
 version = "0.3.0"
-authors = ["Christopher Davis <brainblasted@disroot.org>", "Eric Stokes <eestokes@pm.me>"]
-description = "API bindings for GtkSourceView 4 with subclassing support"
+authors = ["Christopher Davis <brainblasted@disroot.org>"]
+description = "API bindings for GtkSourceView 4"
 license = "LGPL-2.1-or-later"
 keywords = ["gtksourceview", "sourceview", "gtk-rs", "gnome"]
-repository = "https://github.com/estokes/sourceview4-sc"
+repository = "https://gitlab.gnome.org/World/Rust/sourceview4-rs"
 documentation = "https://world.pages.gitlab.gnome.org/Rust/sourceview4-rs/sourceview4/"
 exclude = ["gir-files/*", "gir/"]
 edition = "2021"
@@ -20,11 +20,13 @@ gdk = "0.15"
 gtk = {version = "0.15", features = ["v3_20"]}
 gdk-pixbuf = "0.15"
 pango = "0.15"
+once_cell = "1"
 
 
 [dependencies.ffi]
 package = "sourceview4-sys"
 version = "0.3.0"
+path = "../sourceview4-sys"
 
 [features]
 dox = ["ffi/dox"]
